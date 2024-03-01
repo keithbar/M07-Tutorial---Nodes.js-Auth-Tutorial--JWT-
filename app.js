@@ -11,10 +11,9 @@ app.set('view engine', 'ejs');
 
 // database connection
 const dbURI = 'mongodb+srv://kbarber34:GqfsU5ySDoU3onwL@sdev255.gxv9ds4.mongodb.net/m07tutorial?retryWrites=true&w=majority&appName=SDEV255';
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
+mongoose.connect(dbURI)
   .then((result) => app.listen(3000))
   .catch((err) => console.log(err));
-  
 
 // routes
 app.get('/', (req, res) => res.render('home'));
